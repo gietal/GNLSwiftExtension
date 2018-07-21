@@ -18,7 +18,7 @@ extension Array {
         return removed
     }
     
-    public mutating func remove(matching include: (Element) -> Bool) -> [Element] {
+    public mutating func remove(where include: (Element) -> Bool) -> [Element] {
         // remove from the back of the array
         var removed = [Element]()
         var i = self.count - 1
@@ -29,8 +29,38 @@ extension Array {
             
             i -= 1
         }
+        
         return removed
     }
+}
+
+extension Array where Element: Equatable {
+    // check if this array contain at least 1 item from the other array
+    public func contains(aContentOf other: [Element]) -> Bool {
+        if other.isEmpty {
+            return true
+        }
+        
+        for item in other {
+            if self.contains(where: { $0 == item } ) {
+                return true
+            }
+        }
+        return false
+    }
     
-    
+    // check if this array contains every item from the other element
+    public func contains(contentsOf other: [Element]) -> Bool {
+        if other.isEmpty {
+            return true
+        }
+        
+        for item in other {
+            // this array doesnt contain 1 item from the other array
+            if !self.contains(where: { $0 == item}) {
+                return false
+            }
+        }
+        return true
+    }
 }

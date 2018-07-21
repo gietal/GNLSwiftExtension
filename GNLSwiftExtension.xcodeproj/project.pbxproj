@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		882809BE2103153300AD615E /* GNLSwiftExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882809B42103153300AD615E /* GNLSwiftExtension.framework */; };
 		882809D5210317A400AD615E /* GNLSwiftExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 882809D3210317A400AD615E /* GNLSwiftExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		882809DC2103189B00AD615E /* GNLSwiftExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809D7210317AD00AD615E /* GNLSwiftExtensionTests.swift */; };
+		882809DC2103189B00AD615E /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809D7210317AD00AD615E /* ArrayTests.swift */; };
 		882809E02103195400AD615E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809DF2103195400AD615E /* Array.swift */; };
 		882809E221031A5900AD615E /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809E121031A5900AD615E /* Dictionary.swift */; };
 		882809E421031ACD00AD615E /* NSCollectionView.DropOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809E321031ACD00AD615E /* NSCollectionView.DropOperation.swift */; };
 		882809E621031D1600AD615E /* NSMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809E521031D1600AD615E /* NSMenu.swift */; };
+		882809E82103211400AD615E /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809E72103211400AD615E /* Comparable.swift */; };
+		882809EB2103276500AD615E /* ComparableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882809E92103270600AD615E /* ComparableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,11 +34,13 @@
 		882809D2210317A400AD615E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882809D3210317A400AD615E /* GNLSwiftExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNLSwiftExtension.h; sourceTree = "<group>"; };
 		882809D6210317AD00AD615E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		882809D7210317AD00AD615E /* GNLSwiftExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GNLSwiftExtensionTests.swift; sourceTree = "<group>"; };
+		882809D7210317AD00AD615E /* ArrayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		882809DF2103195400AD615E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		882809E121031A5900AD615E /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		882809E321031ACD00AD615E /* NSCollectionView.DropOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionView.DropOperation.swift; sourceTree = "<group>"; };
 		882809E521031D1600AD615E /* NSMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenu.swift; sourceTree = "<group>"; };
+		882809E72103211400AD615E /* Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comparable.swift; sourceTree = "<group>"; };
+		882809E92103270600AD615E /* ComparableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +65,8 @@
 		882809AA2103153200AD615E = {
 			isa = PBXGroup;
 			children = (
-				882809D12103178800AD615E /* test */,
 				882809D02103177300AD615E /* source */,
+				882809D12103178800AD615E /* test */,
 				882809B52103153300AD615E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +89,7 @@
 				882809E121031A5900AD615E /* Dictionary.swift */,
 				882809E321031ACD00AD615E /* NSCollectionView.DropOperation.swift */,
 				882809E521031D1600AD615E /* NSMenu.swift */,
+				882809E72103211400AD615E /* Comparable.swift */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -92,8 +97,9 @@
 		882809D12103178800AD615E /* test */ = {
 			isa = PBXGroup;
 			children = (
-				882809D7210317AD00AD615E /* GNLSwiftExtensionTests.swift */,
+				882809D7210317AD00AD615E /* ArrayTests.swift */,
 				882809D6210317AD00AD615E /* Info.plist */,
+				882809E92103270600AD615E /* ComparableTests.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				882809E621031D1600AD615E /* NSMenu.swift in Sources */,
 				882809E02103195400AD615E /* Array.swift in Sources */,
 				882809E221031A5900AD615E /* Dictionary.swift in Sources */,
+				882809E82103211400AD615E /* Comparable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				882809DC2103189B00AD615E /* GNLSwiftExtensionTests.swift in Sources */,
+				882809DC2103189B00AD615E /* ArrayTests.swift in Sources */,
+				882809EB2103276500AD615E /* ComparableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
